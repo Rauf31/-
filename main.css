@@ -16,7 +16,7 @@
     width: 653px;
     height: 945px;
     opacity: 0;
-    transition: opacity 0.4s; /* Use GPU accelerated properties */
+    transition: opacity 0.4s;
 }
   
 #images img.is-active {
