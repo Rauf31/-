@@ -1,3 +1,7 @@
+* {
+    margin: 0;
+}
+
 #images {
     position: absolute;
     top: 0;
@@ -81,6 +85,13 @@ button:hover {
 
 i {
     margin-top: 2px;
+}
+
+@media only screen and (max-width: 1600px) {
+    #images img {
+        width: 38%;
+        height: 100%;
+    }
 }
 
 @media only screen and (max-width: 1024px) {
