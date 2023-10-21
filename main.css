@@ -1,1 +1,131 @@
+#images {
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+}
+  
+#images img {
+    left: 0; 
+    right: 0; 
+    margin-left: auto;
+    margin-right: auto;
+    position: absolute;
+    pointer-events: none;
+    width: 653px;
+    height: 945px;
+    opacity: 0;
+    transition: opacity 0.4s; /* Use GPU accelerated properties */
+}
+  
+#images img.is-active {
+    opacity: 1;
+    pointer-events: auto;
+}
 
+.all {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: 0;
+}
+
+#buttons {
+    display: flex;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    align-items: end;
+    justify-content: center;
+    z-index: 1;
+    margin-bottom: 10px;
+}
+
+button {
+    font-size: 16px;
+    border: none;
+    background-color: rgba(255, 255, 255, 0.5);
+    width: 30px;
+    height: 30px;
+    border-radius: 100px;
+    border: 1px solid black;
+}
+
+#number {
+    width: 100px;
+    height: 25px;
+    border-radius: 10px;
+    border: 1px solid black;
+    margin-left: 10px;
+    margin-right: 10px;
+    text-align: center;
+    font-size: 16px;
+    font-weight: bold;
+    
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+button:hover {
+    cursor: pointer;
+    transition: 1s;
+    filter: brightness(1.75);
+}
+
+i {
+    margin-top: 2px;
+}
+
+@media only screen and (max-width: 1024px) {
+    #images img {
+        width: 57.5%;
+        height: 100%;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    #images img {
+        width: 76.5%;
+        height: 100%;
+    }
+}
+
+@media only screen and (max-width: 425px) {
+    * {
+        overflow: hidden;
+    }
+    #images img {
+        width: 120%;
+        height: 100%;
+        margin-right: -10%;
+    }
+}
+
+@media only screen and (max-width: 375px) {
+    * {
+        overflow: hidden;
+    }
+    #images img {
+        width: 125%;
+        height: 100%;
+        margin-right: -12.5%;
+    }
+}
+
+@media only screen and (max-width: 320px) {
+    * {
+        overflow: hidden;
+    }
+    #images img {
+        width: 130%;
+        height: 100%;
+        margin-right: -15%;
+    }
+}
