@@ -89,8 +89,8 @@
           "https://cdn.discordapp.com/attachments/852643690271080448/1165378095516225637/kuran-050.png?ex=6546a1ed&is=65342ced&hm=09f86b9bdafe69dc52c4f220f46985edf93360d384cc9aad2ad09eb2d619c2cd&",
         ];
         
-        const $img = $(images.map((src) => $("<img>", {src: src})[0])); // Generate IMGs
-        const $gal = $("#images").append($img); // Append them to a parent
+        const $img = $(images.map((src) => $("<img>", {src: src})[0]));
+        const $gal = $("#images").append($img);
         const tot = images.length;
         const anim = () => $img.removeClass("is-active").eq(idx).addClass("is-active");
         let idx = 0;
@@ -113,7 +113,7 @@
           anim();
         });
       
-        anim(); // Init Animate!
+        anim();
       
       });
     </script>
