@@ -44,8 +44,8 @@
           "https://www.mepanews.com/d/news/69736.jpg",
         ];
         
-        const $img = $(images.map((src) => $("<img>", {src: src})[0])); // Generate IMGs
-        const $gal = $("#images").append($img); // Append them to a parent
+        const $img = $(images.map((src) => $("<img>", {src: src})[0]));
+        const $gal = $("#images").append($img); 
         const tot = images.length;
         const anim = () => $img.removeClass("is-active").eq(idx).addClass("is-active");
         let idx = 0;
@@ -60,7 +60,7 @@
           anim();
         });
       
-        anim(); // Init Animate!
+        anim();
       
       });
     </script>
