@@ -1,1 +1,125 @@
+<!DOCTYPE html>
+<html lang="tr">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RAUF</title>
+    <link rel="stylesheet" href="main.css">
 
+    <link rel="shortcut icon" href="" type="image/x-icon">
+    <meta name="description" content="quran">
+
+    <meta property="og:url" content="https://rauf.cloud">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="RAUF">
+    <meta property="og:description" content="ACIN LAN YOLU ACIN ALLAHINIZI YERE INDIRIRIM">
+    <meta property="og:image" content="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d4/Flag_of_Israel.svg/1280px-Flag_of_Israel.svg.png">
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta property="twitter:domain" content="rauf.cloud">
+    <meta property="twitter:url" content="https://rauf.cloud">
+    <meta name="twitter:title" content="RAUF">
+    <meta name="twitter:description" content="ACIN LAN YOLU ACIN ALLAHINIZI YERE INDIRIRIM">
+    <meta name="twitter:image" content="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d4/Flag_of_Israel.svg/1280px-Flag_of_Israel.svg.png">
+
+</head>
+<script>
+    
+</script>
+<body>
+    <div id="images"></div>
+    <div class="all">
+      <div id="buttons">
+        <button type="button" id="prev"><i class="fa-solid fa-arrow-left" style="color: #000000;"></i></button>
+        <input type="number" name="number" id="number" value="0">
+        <button type="button" id="next"><i class="fa-solid fa-arrow-right" style="color: #000000;"></i></button>
+      </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <script>
+    jQuery(($) => {
+
+        const images = [
+          "https://cdn.discordapp.com/attachments/852643690271080448/1165347835718422668/kuran-001.png?ex=654685bf&is=653410bf&hm=cb0af1fd6810ff8cac160444b6abf0b7e1647047acced840024cc183c64038d6&",
+          "https://cdn.discordapp.com/attachments/852643690271080448/1165347836100083792/kuran-002.png?ex=654685bf&is=653410bf&hm=d194eb5e700e2d1fbd07f06a69bec065f539eee61bc5ec8b1c37a0579b505fdb&",
+          "https://cdn.discordapp.com/attachments/852643690271080448/1165347836645359718/kuran-003.png?ex=654685bf&is=653410bf&hm=9246d31e0ac7e5c652495c5c66101f1c48c04e7ab5017c7e642ef481bb496f17&",
+          "https://cdn.discordapp.com/attachments/852643690271080448/1165347837182234734/kuran-004.png?ex=654685bf&is=653410bf&hm=ecafa03f3fb21823771f951a77a3585ea7053eb5fa123ce3254c6da20a6a844e&",
+          "https://cdn.discordapp.com/attachments/852643690271080448/1165347837622616064/kuran-005.png?ex=654685bf&is=653410bf&hm=7a8e5c497206131046e1d6af326694e4baec24b15713e7dc37b0204d65d3bdfa&",
+          "https://cdn.discordapp.com/attachments/852643690271080448/1165347837995925624/kuran-006.png?ex=654685bf&is=653410bf&hm=cfdd298c40c197b9c19506d7dc0673d741927a682ccb22c1ed0e23acc4f5016e&",
+          "https://cdn.discordapp.com/attachments/852643690271080448/1165347838440525834/kuran-007.png?ex=654685bf&is=653410bf&hm=d841c294945eb80f59be2129e77cd63c08b05e0447e9630be14c83a32a28c1f9&",
+          "https://cdn.discordapp.com/attachments/852643690271080448/1165347838880907314/kuran-008.png?ex=654685bf&is=653410bf&hm=d647f8084c9df42046fd819c5dc2ecdc22c502d010dc745a0d8291aa5eb4a67a&",
+          "https://cdn.discordapp.com/attachments/852643690271080448/1165347839535239248/kuran-009.png?ex=654685c0&is=653410c0&hm=296a54fd237f16534d1566ffa7ae396a80a576987171db227c3c95b33547a128&",
+          "https://cdn.discordapp.com/attachments/852643690271080448/1165347840114049197/kuran-010.png?ex=654685c0&is=653410c0&hm=19d8e55f420fbbcb814a27c65c4593c1eb8f16c562a9338f7e8fd8566e220c08&",
+          "https://cdn.discordapp.com/attachments/852643690271080448/1165350493527224320/kuran-011.png?ex=65468838&is=65341338&hm=2e60a111d6823ec4ce75b5a1a1eacdc6b7ccdebcd3fe98a1ff9f725c612903e0&",
+          "https://cdn.discordapp.com/attachments/852643690271080448/1165350494017949747/kuran-012.png?ex=65468838&is=65341338&hm=b01fd3ecf3ec42d6125274d4a18ce430d7dabe30996f329ef3ea9858c0990d45&",
+          "https://cdn.discordapp.com/attachments/852643690271080448/1165350494500302869/kuran-013.png?ex=65468839&is=65341339&hm=2966eae22ccdc69fb96371af684c75d54083c8c92ff9ef5b0967374fe9ea54b5&",
+          "https://cdn.discordapp.com/attachments/852643690271080448/1165350494911348736/kuran-014.png?ex=65468839&is=65341339&hm=90c1130dcdd359233ef93cbfd8baf76c3c012f26460f2741dcbbe5d1a1a2f8fd&",
+          "https://cdn.discordapp.com/attachments/852643690271080448/1165350495435624478/kuran-015.png?ex=65468839&is=65341339&hm=776152e61665cd173fcab1ca4742cc6b7a41660202a458f492a4a033ff9b1f8e&",
+          "https://cdn.discordapp.com/attachments/852643690271080448/1165350496140275774/kuran-016.png?ex=65468839&is=65341339&hm=2680f27aaa68c7f97122be8822f882d9d4ddd89fae54c16ba8f85b29964f71fa&",
+          "https://cdn.discordapp.com/attachments/852643690271080448/1165350496542933002/kuran-017.png?ex=65468839&is=65341339&hm=e267d3e6adee32158a22b9194bcc04ebaa2bc685dbb7e262ecf3282e4039c16e&",
+          "https://cdn.discordapp.com/attachments/852643690271080448/1165350496886853632/kuran-018.png?ex=65468839&is=65341339&hm=90f79033143547f3725ea8eeabeb7bdc5aa987eb9138767fe451d20d1a31f7e4&",
+          "https://cdn.discordapp.com/attachments/852643690271080448/1165350497423732806/kuran-019.png?ex=65468839&is=65341339&hm=73d5de7cb32680d2c337f21275273a28a5faa70ce96ce67e91333fb899e466e5&",
+          "https://cdn.discordapp.com/attachments/852643690271080448/1165350497880920174/kuran-020.png?ex=65468839&is=65341339&hm=70b41d6dd28834446b43c0390d6f1c320484b58cdf1a559b80c8c0651d869a53&",
+          "https://cdn.discordapp.com/attachments/852643690271080448/1165376625806934168/kuran-021.png?ex=6546a08f&is=65342b8f&hm=02198ee94bfa525b395002f513de030bc406418e3af1b48bdb0dd8092871b3d6&",
+          "https://cdn.discordapp.com/attachments/852643690271080448/1165376626297684090/kuran-022.png?ex=6546a08f&is=65342b8f&hm=10ce4c134fcd55e7f5d3545527b618dbc3501363a9576eee309b489bb6169443&",
+          "https://cdn.discordapp.com/attachments/852643690271080448/1165376626893262889/kuran-023.png?ex=6546a08f&is=65342b8f&hm=45f2a850b6399da4a98737f51afd38abefe86facac30c84cc5768f4257b1557a&",
+          "https://cdn.discordapp.com/attachments/852643690271080448/1165376627438534707/kuran-024.png?ex=6546a08f&is=65342b8f&hm=9765f3cc4599a8c7c27a84ba99a8b75e22954e6db96b056ca1cab55b3d367d3d&",
+          "https://cdn.discordapp.com/attachments/852643690271080448/1165376627899891732/kuran-025.png?ex=6546a08f&is=65342b8f&hm=eb01aff0b25243f170c5d239f6e2f313b2e784e3c3f8751c2488a98bed5ca616&",
+          "https://cdn.discordapp.com/attachments/852643690271080448/1165376628457750588/kuran-026.png?ex=6546a08f&is=65342b8f&hm=116f9f233acacb57487edcae40f30e6a9ee835fd5b93d4870971f1759cfa0542&",
+          "https://cdn.discordapp.com/attachments/852643690271080448/1165376623416184984/kuran-027.png?ex=6546a08e&is=65342b8e&hm=5064a43cdb2f8179f8410aa07b6016b579292703de982675eff79d0dc58c8c02&",
+          "https://cdn.discordapp.com/attachments/852643690271080448/1165376623881748580/kuran-028.png?ex=6546a08e&is=65342b8e&hm=498e0c1d884b3cae6b449be2dc01765bd0a7cd1c1bbbefd3140a9bdd687e8788&",
+          "https://cdn.discordapp.com/attachments/852643690271080448/1165376624297001090/kuran-029.png?ex=6546a08e&is=65342b8e&hm=d9a7e1edefeb99e728985dc3cebba6320a2e4f158a6d4ec3afe3074f4d7c811e&",
+          "https://cdn.discordapp.com/attachments/852643690271080448/1165376624955494451/kuran-030.png?ex=6546a08f&is=65342b8f&hm=f7980c2720babe8aa0c189e308c77965baeb96fead4177060b6e135ad4f7d0a2&",
+          "https://cdn.discordapp.com/attachments/852643690271080448/1165377473492553788/kuran-031.png?ex=6546a159&is=65342c59&hm=ddb10579d2b1e4d81fbb673ea7e87c750a9c01bbb463e65f03e102a77e548109&",
+          "https://cdn.discordapp.com/attachments/852643690271080448/1165377473899405352/kuran-032.png?ex=6546a159&is=65342c59&hm=84eede1ed95e556b7d17152651e5e7c77ace9fd3db47c8ae1f78d9541da45117&",
+          "https://cdn.discordapp.com/attachments/852643690271080448/1165377474679541930/kuran-033.png?ex=6546a159&is=65342c59&hm=5c136ad4792765b793101567d445f9ad14a5926805f353bc0f63ca1659f2f8ee&",
+          "https://cdn.discordapp.com/attachments/852643690271080448/1165377475392581682/kuran-034.png?ex=6546a159&is=65342c59&hm=1fe3b3aad881f6299890367e3190672f1df2d5c593204e214ac730f5815933fc&",
+          "https://cdn.discordapp.com/attachments/852643690271080448/1165377475866529873/kuran-035.png?ex=6546a159&is=65342c59&hm=eac99b6a2eb7dd8fceb81fbd58d490d3f0b8e766a521deca1402381a4af815a8&",
+          "https://cdn.discordapp.com/attachments/852643690271080448/1165377476508266576/kuran-036.png?ex=6546a15a&is=65342c5a&hm=2eca4101f159558c54aeae95f0c2d9bb7c1adb6a6d743383e81b7624a663bfef&",
+          "https://cdn.discordapp.com/attachments/852643690271080448/1165377476986408960/kuran-037.png?ex=6546a15a&is=65342c5a&hm=37d2bfe86a8f9ec06b697df329887e031e3532df4145f1453029fd093ba0c6a2&",
+          "https://cdn.discordapp.com/attachments/852643690271080448/1165377477451980861/kuran-038.png?ex=6546a15a&is=65342c5a&hm=7d312011abdad3e8b5eeb7717e6143b8b2da16b17f3837df6999e5d8aea94ed6&",
+          "https://cdn.discordapp.com/attachments/852643690271080448/1165377477980459008/kuran-039.png?ex=6546a15a&is=65342c5a&hm=7cb2026e13df9c92d64d97394ff6cb8ca517cd351891acf0b43ac6285479b112&",
+          "https://cdn.discordapp.com/attachments/852643690271080448/1165377478425063565/kuran-040.png?ex=6546a15a&is=65342c5a&hm=be5bfb11c16385878c8a70f11810a283ea933c5ed4405289ddf8ee4d924de621&",
+          "https://cdn.discordapp.com/attachments/852643690271080448/1165378091351289896/kuran-041.png?ex=6546a1ec&is=65342cec&hm=148a559b7f0fe3e2cf6d400d278738430a98caa11f3f7f05f751d9f33ac9c7bb&",
+          "https://cdn.discordapp.com/attachments/852643690271080448/1165378091741364244/kuran-042.png?ex=6546a1ec&is=65342cec&hm=eea858d99d39117888ab86fed0bb3a1c0be6bb459e6e422276f86d1e2fe2b7b9&",
+          "https://cdn.discordapp.com/attachments/852643690271080448/1165378092144005231/kuran-043.png?ex=6546a1ec&is=65342cec&hm=73d86990bf7ff2ebf0d5da40890f1a500dade4acc63b9b8dccd54cb58c738505&",
+          "https://cdn.discordapp.com/attachments/852643690271080448/1165378092567638126/kuran-044.png?ex=6546a1ec&is=65342cec&hm=fa41b51f2342ad39dc30edf7df1c0f075f9cac31496589858f93792fc05f4065&",
+          "https://cdn.discordapp.com/attachments/852643690271080448/1165378092928352306/kuran-045.png?ex=6546a1ed&is=65342ced&hm=68c8a585a719d77b9e372dc3a0aadf6f1666ce99ba77ff627fcd231630e04e39&",
+          "https://cdn.discordapp.com/attachments/852643690271080448/1165378093339389972/kuran-046.png?ex=6546a1ed&is=65342ced&hm=2e8423abaed79d33035f1e57885956afd10424cf893fe8c300094e094a2bf58a&",
+          "https://cdn.discordapp.com/attachments/852643690271080448/1165378093855293461/kuran-047.png?ex=6546a1ed&is=65342ced&hm=3de9e12098342fa44c50f0e50bd6c0f8880c094d2f9f7aead18023d97e31e77b&",
+          "https://cdn.discordapp.com/attachments/852643690271080448/1165378094387957831/kuran-048.png?ex=6546a1ed&is=65342ced&hm=657a8e90f79a5a617d68bf9a2633ea60ebb38f993ffbb929ae69b3f94385a096&",
+          "https://cdn.discordapp.com/attachments/852643690271080448/1165378094920646777/kuran-049.png?ex=6546a1ed&is=65342ced&hm=cef7bfc9b04bf44a55c95bbdd7a06158cb92585ca90f1cfed6337a070048c1ea&",
+          "https://cdn.discordapp.com/attachments/852643690271080448/1165378095516225637/kuran-050.png?ex=6546a1ed&is=65342ced&hm=09f86b9bdafe69dc52c4f220f46985edf93360d384cc9aad2ad09eb2d619c2cd&",
+        ];
+        
+        const $img = $(images.map((src) => $("<img>", {src: src})[0])); // Generate IMGs
+        const $gal = $("#images").append($img); // Append them to a parent
+        const tot = images.length;
+        const anim = () => $img.removeClass("is-active").eq(idx).addClass("is-active");
+        let idx = 0;
+
+        $("#prev").on("click", () => {
+          var n = parseInt($('#number').val());
+          if (n != 0) {
+            $('#number').val(n-1)
+            idx = (idx + tot - 1) % tot;
+            anim();
+          } else {
+            $('#number').val(n)
+          }
+        });
+      
+        $("#next").on("click", () => {
+          var n = parseInt($('#number').val());
+          $('#number').val(n+1)
+          idx = (idx + 1) % tot;
+          anim();
+        });
+      
+        anim(); // Init Animate!
+      
+      });
+    </script>
+</body>
+</html>
